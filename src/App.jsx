@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer title='Mithra' />
+      <ItemListContainer title='Clothes' />
     </>
   )
 }
