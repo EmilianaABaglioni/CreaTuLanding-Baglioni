@@ -6,9 +6,8 @@ import Dashboard from './components/Dashboard/Dashboard'
 function App() {
   return (
     <>
-
+      <NavBar />
       <Dashboard>
-        <NavBar />
         <ItemListContainer title='Clothes' />
       </Dashboard>
 
