@@ -1,7 +1,8 @@
 import React from 'react'
+import styles from './Styles/NavBar.module.css'
 import CartWidget from '../CartWidget/CartWidget'
 import MenuCategories from '../MenuCategories/MenuCategories'
-import styles from './Styles/NavBar.module.css'
+import Logo from '../Logo/Logo'
 
 
 const NavBar = () => {
@@ -13,9 +14,7 @@ const NavBar = () => {
 
         <MenuCategories />
 
-        <div className={styles.logo}>
-          LOGO
-        </div>
+        <Logo />
 
         <CartWidget />
 

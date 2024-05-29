@@ -24,7 +24,7 @@ const MenuCategories = () => {
             <div className={styles.categories}>
 
                 <div className={styles.menuCategories}>
-                    <p onClick={() => setOpen(!open)} ref={categoriesRef}>PRODUCTOS</p>
+                    <p onClick={() => setOpen(!open)} ref={categoriesRef}>Productos</p>
                 </div>
 
                 {

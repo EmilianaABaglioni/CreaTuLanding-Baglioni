@@ -1,28 +1,40 @@
-.menuCategories {
+.categories {
     position: relative;
-    font-size: 16px;
+}
+
+.menuCategories {
+    font-size: 18px;
 }
 
 .menuCategories:hover {
     cursor: pointer;
+    color: #004d29;
+}
+
+.menuCategories,
+.listCategories {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .listCategories {
     position: absolute;
-    padding: 0%;
-    margin: 10%;
-    background: white;
+    left: 25px;
+    top: 30px;
+    background-color: rgba(76,130,105,0.5);
+    border-radius: 15px;
+    padding: 25px 35px; 
     list-style: none;
     text-transform: capitalize;
     font-size: 14px;
 }
 
 .liListCategories:hover {
-    background: lightblue;
-    border-radius: 5%;
+    background: #f5f4f4;
+    padding: 8px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-div {
-    margin: 10px;
-}

@@ -1,12 +1,12 @@
 import React from 'react'
-import { CiShoppingCart } from 'react-icons/ci'
+import { IoCart } from "react-icons/io5";
 import styles from './Styles/CartWidget.module.css'
 
 const CartWidget = () => {
   return (
     <>
       <div>
-        <CiShoppingCart className={styles.iconcart}/>
+        <IoCart className={styles.iconcart} />
       </div>
     </>
 

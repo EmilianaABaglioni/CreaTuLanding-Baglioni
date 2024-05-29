@@ -8,7 +8,7 @@ function App() {
     <>
       <NavBar />
       <Dashboard>
-        <ItemListContainer title='Clothes' />
+        <ItemListContainer title='PRODUCTOS' />
       </Dashboard>
 
     </>

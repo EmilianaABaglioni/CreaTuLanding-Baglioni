@@ -58,8 +58,8 @@ const products = [
 // filtro de categorias para que no se repitan en navbar
 const categories = products.map(cat => cat.category);
 
-export const listCategory = categories.filter((category, index) => {
-  return categories.indexOf(category) === index;
+export const listCategory = categories.filter((category, id) => {
+  return categories.indexOf(category) === id;
 });
 
 export const getProducts = () => {
