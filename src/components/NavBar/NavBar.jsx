@@ -12,11 +12,25 @@ const NavBar = () => {
 
       <div className={styles.navbar}>
 
-        <MenuCategories />
+        <div className={styles.boxLogo}>
+          <Logo />
+        </div>
 
-        <Logo />
+        <div className={styles.boxLinks}>
 
-        <CartWidget />
+          <div className={styles.boxMenuCategories}>
+            <MenuCategories />
+          </div>
+
+          <div className={styles.boxSing}>
+            <p className={styles.sing}>Sing up Sing in</p>
+          </div>
+
+          <div className={styles.boxCartWidget}>
+            <CartWidget />
+          </div>
+
+        </div>
 
       </div>
 

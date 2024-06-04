@@ -2,6 +2,31 @@
     background-color: #f5f4f4;
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+}
+
+.boxLinks {
+    display: flex;
+    align-items: center;
+}
+
+.boxLinks div {
+    width: 100%;
+    margin: 10px;
+}
+
+.sing {
+    font-size: 14px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+}
+
+@media (min-width: 480px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 }

@@ -8,15 +8,21 @@ const MenuCategories = () => {
 
     const categoriesRef = useRef()
     const listCategoriesRef = useRef()
-    
+
     useEffect(() => {
-  
-      window.addEventListener('click', (e) => {
-        if (e.target !== listCategoriesRef.current && e.target !== categoriesRef.current) {
-          setOpen(false);
+
+        const handleClick = (e) => {
+            if (e.target !== listCategoriesRef.current && e.target !== categoriesRef.current) {
+                setOpen(false);
+            }
         }
-      })
-  
+
+        window.addEventListener('click', handleClick)
+
+        return () => {
+            window.removeEventListener('click', handleClick)
+        }
+
     }, [])
 
     return (
@@ -24,7 +30,7 @@ const MenuCategories = () => {
             <div className={styles.categories}>
 
                 <div className={styles.menuCategories}>
-                    <p onClick={() => setOpen(!open)} ref={categoriesRef}>Productos</p>
+                    <p onClick={() => setOpen(!open)} ref={categoriesRef}>PRODUCTOS</p>
                 </div>
 
                 {
