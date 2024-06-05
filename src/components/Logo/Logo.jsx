@@ -1,4 +1,4 @@
-import logo from '../../../public/bv.png';
+import logo from '../../assets/mithralogo.png';
 import styles from './Styles/Logo.module.css';
 
 const Logo = () => {

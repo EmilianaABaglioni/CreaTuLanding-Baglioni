@@ -10,7 +10,6 @@ function App() {
       <Dashboard>
         <ItemListContainer title='PRODUCTOS' />
       </Dashboard>
-
     </>
   )
 }
