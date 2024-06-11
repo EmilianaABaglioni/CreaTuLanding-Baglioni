@@ -72,8 +72,17 @@ export const getProducts = () => {
   return new Promise((res, rec) => {
     setTimeout(() => {
       res(products);
-    }, 1500);
+    }, 2000);
   });
 };
 
-
+export const getProductsByCategory = (categoryId) => {
+  return new Promise((res) => {
+    const filteredProducts = products.filter(
+      (product) => product.category === categoryId
+    );
+    setTimeout(() => {
+      res(filteredProducts);
+    }, 2000);
+  });
+};

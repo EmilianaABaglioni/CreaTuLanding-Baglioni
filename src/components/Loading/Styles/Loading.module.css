@@ -1,0 +1,8 @@
+.loading {
+    width: 60%;
+}
+
+.boxLoading {
+    display: flex;
+    justify-content: center;
+}
