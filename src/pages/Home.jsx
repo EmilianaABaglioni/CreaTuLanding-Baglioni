@@ -1,11 +1,14 @@
 import React from 'react'
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
 import Dashboard from '../components/Dashboard/Dashboard'
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Dashboard>
+        <ItemListContainer />
+      </Dashboard>
+    </>
   )
 }
 

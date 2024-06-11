@@ -1,53 +1,59 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { listCategory } from '../../utils/data'
-import styles from './Styles/MenuCategories.module.css'
+import { useState, useRef, useEffect } from "react";
+import { listCategory } from "../../utils/data";
+import styles from "./Styles/MenuCategories.module.css";
+import { Link } from "react-router-dom";
 
 const MenuCategories = () => {
+  const [open, setOpen] = useState(false);
 
-    const [open, setOpen] = useState(false)
+  const categoriesRef = useRef();
+  const listCategoriesRef = useRef();
 
-    const categoriesRef = useRef()
-    const listCategoriesRef = useRef()
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (
+        e.target !== listCategoriesRef.current &&
+        e.target !== categoriesRef.current
+      ) {
+        setOpen(false);
+      }
+    };
 
-    useEffect(() => {
+    window.addEventListener("click", handleClick);
 
-        const handleClick = (e) => {
-            if (e.target !== listCategoriesRef.current && e.target !== categoriesRef.current) {
-                setOpen(false);
-            }
-        }
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
 
-        window.addEventListener('click', handleClick)
+  return (
+    <>
+      <div className={styles.categories}>
+        <div className={styles.menuCategories}>
+          <p onClick={() => setOpen(!open)} ref={categoriesRef}>
+            PRODUCTOS
+          </p>
+        </div>
 
-        return () => {
-            window.removeEventListener('click', handleClick)
-        }
+        {open && (
+          <ul className={styles.listCategories}>
+            <Link to='/products'>TODOS LOS PRODUCTOS</Link>
+            {listCategory.map((category, id) => (
+              <Link
+                to={`/products/${category}`}
+                className={styles.liListCategories}
+                key={id}
+                onClick={() => setOpen(false)}
+                ref={listCategoriesRef}
+              >
+                {category}
+              </Link>
+            ))}
+          </ul>
+        )}
+      </div>
+    </>
+  );
+};
 
-    }, [])
-
-    return (
-        <>
-            <div className={styles.categories}>
-
-                <div className={styles.menuCategories}>
-                    <p onClick={() => setOpen(!open)} ref={categoriesRef}>PRODUCTOS</p>
-                </div>
-
-                {
-                    open && (
-                        <ul className={styles.listCategories}>
-                            {listCategory.map((category, id) => (
-                                <li className={styles.liListCategories} key={id} onClick={() => setOpen(false)} ref={listCategoriesRef}>
-                                    {category}
-                                </li>
-                            ))}
-                        </ul>
-                    )
-                }
-
-            </div>
-        </>
-    )
-}
-
-export default MenuCategories
+export default MenuCategories;
