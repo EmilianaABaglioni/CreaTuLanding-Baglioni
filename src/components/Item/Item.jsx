@@ -3,6 +3,7 @@ import styles from './Styles/Item.module.css'
 import { Link } from 'react-router-dom'
 import { TbHandClick } from "react-icons/tb";
 
+
 const Item = ({id, name, price, image}) => {
   return (
     <>

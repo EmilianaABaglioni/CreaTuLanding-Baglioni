@@ -1,0 +1,22 @@
+.detailBox {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.infoBox {
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    margin-left: 15px;
+}
+
+.name {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.imageBox img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
