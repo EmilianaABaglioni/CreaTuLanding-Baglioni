@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import PageNotFound from './components/PageNotFound/PageNotFound'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/products" element={<ItemListContainer />} />
         <Route path="/products/category/:categoryId" element={<ItemListContainer />} />
         <Route path="/products/detail/:productId" element={<ItemDetailContainer />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
