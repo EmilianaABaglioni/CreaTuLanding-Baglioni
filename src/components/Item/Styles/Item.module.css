@@ -20,7 +20,8 @@
     font-style: normal;
 }
 
-.priceProduct {
+.priceProduct,
+.buttonDetail {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -31,16 +32,23 @@
     padding: 5px 15px;
     border-style: solid;
     border-radius: 25px;
-    border-color: rgba(0, 0, 0, 0.634);
-    border-width: 1.5px;
+    border-color: rgba(97, 96, 96, 0.085);
+    border-width: 2px;
+    background: rgba(227, 227, 214, 0.704) 26%;
 }
 
 .buttonDetail {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     font-size: 14px;
+    color: rgba(104, 85, 85, 0.76);
+}
+
+.iconClick {
+    font-size: 16px;
+    margin-left: 3px;
+    
 }
 
 @media (min-width: 560px) {

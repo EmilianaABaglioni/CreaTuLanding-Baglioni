@@ -42,7 +42,7 @@ const products = [
   {
     id: 5,
     name: "Pantalon",
-    category: "sastreros",
+    category: "pantalones",
     description: "ashdghasdghasgdsdga",
     price: 7000,
     image:

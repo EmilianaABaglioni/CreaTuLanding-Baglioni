@@ -37,7 +37,7 @@ const MenuCategories = () => {
 
         {open && (
           <ul className={styles.listCategories}>
-            <Link to='/products'>TODOS LOS PRODUCTOS</Link>
+            <Link to='/products' className={styles.allProducts}>VER TODOS</Link>
             {listCategory.map((category, id) => (
               <Link
                 to={`/products/category/${category}`}

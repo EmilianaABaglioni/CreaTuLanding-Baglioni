@@ -22,7 +22,7 @@
 .listCategories {
     position: absolute;
     left: 8px;
-    top: 10px;
+    top: 20px;
     background-color: rgba(153,153,153,0.3);
     border-radius: 5px;
     padding: 15px 35px 15px 10px;
@@ -32,9 +32,22 @@
 }
 
 .liListCategories:hover {
-    background: #f5f4f4;
+    background: rgba(255, 255, 255, 0.704) 26%;
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
 }
 
+
+.listCategories a {
+    display: block;
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.allProducts {
+    margin-bottom: 5px;
+}

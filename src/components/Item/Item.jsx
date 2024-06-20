@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Styles/Item.module.css'
 import { Link } from 'react-router-dom'
+import { TbHandClick } from "react-icons/tb";
 
 const Item = ({id, name, price, image}) => {
   return (
@@ -15,7 +16,7 @@ const Item = ({id, name, price, image}) => {
             <p className={styles.priceProduct}>$ {price}</p>
         </div>
         <div className={styles.boxButton}>
-            <Link to={`/products/detail/${id}`} className={styles.buttonDetail}>+ Ver más</Link>
+            <Link to={`/products/detail/${id}`} className={styles.buttonDetail}>Detalle<TbHandClick className={styles.iconClick}/></Link>
         </div>
       </div>
 
