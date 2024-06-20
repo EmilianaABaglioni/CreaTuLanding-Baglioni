@@ -40,7 +40,7 @@ const MenuCategories = () => {
             <Link to='/products'>TODOS LOS PRODUCTOS</Link>
             {listCategory.map((category, id) => (
               <Link
-                to={`/products/${category}`}
+                to={`/products/category/${category}`}
                 className={styles.liListCategories}
                 key={id}
                 onClick={() => setOpen(false)}

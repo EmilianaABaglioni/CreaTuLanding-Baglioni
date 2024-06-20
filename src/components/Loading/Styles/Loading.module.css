@@ -1,8 +1,16 @@
 .loading {
-    width: 60%;
+    width: 30px;
 }
 
 .boxLoading {
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 560px) {
+
+    .loading {
+        width: 40px;
+    }
+    
 }

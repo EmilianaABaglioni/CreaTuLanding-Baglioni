@@ -1,6 +1,6 @@
-const ItemDetail = ({ item }) => {
-    const { name, description, image, price } = item
+import React from "react"
 
+const ItemDetail = ({ name, description, image, price }) => {
     return (
         <>
             <div>
