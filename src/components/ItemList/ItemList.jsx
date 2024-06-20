@@ -8,7 +8,7 @@ const ItemList = ({ itemList }) => {
       <div className={styles.boxItemList}>
         {itemList.map(({ id, name, price, image }) => {
           return (
-            <Item key={id} id={id} name={name} price={price} image={image} />
+            <Item key={id} id={id} name={name} price={price} image={image} className={styles.item} />
           );
         })}
       </div>

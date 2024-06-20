@@ -36,7 +36,7 @@ const products = [
     description: "ashdghasdghasgdsdga",
     price: 7000,
     image:
-      "https://static.wixstatic.com/media/880221_a2bb33e741f54527a38625de0a0bfa0b~mv2.png/v1/fill/w_563,h_990,al_c,q_90,enc_auto/880221_a2bb33e741f54527a38625de0a0bfa0b~mv2.png",
+      "https://acdn.mitiendanube.com/stores/238/172/products/foto-5-11-23-04-16-14-4d766d9fc76c1fde4d17001614750226-480-0.jpg",
     stock: 10,
   },
   {

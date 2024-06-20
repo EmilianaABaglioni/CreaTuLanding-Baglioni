@@ -11,8 +11,11 @@
 }
 
 .image {
-    max-width: 150px;
+    width: 250px;; 
+    height: 350px;
+    object-fit: cover;
 }
+
 
 .nameProduct {
     font-family: "Be Vietnam Pro", sans-serif;
@@ -51,10 +54,14 @@
     
 }
 
-@media (min-width: 560px) {
-
-    .image {
-        max-width: 180px;
+@media (min-width: 700px) {
+    .boxItem {
+        flex-basis: calc(50% - 20px);
     }
+}
 
+@media (min-width: 900px) {
+    .boxItem {
+        flex-basis: calc(30% - 20px); 
+    }
 }
