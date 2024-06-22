@@ -17,7 +17,7 @@ const Item = ({id, name, price, image}) => {
             <p className={styles.priceProduct}>$ {price}</p>
         </div>
         <div className={styles.boxButton}>
-            <Link to={`/products/detail/${id}`} className={styles.buttonDetail}>Detalle<TbHandClick className={styles.iconClick}/></Link>
+            <Link to={`/products/${id}`} className={styles.buttonDetail}>Detalle<TbHandClick className={styles.iconClick}/></Link>
         </div>
       </div>
 

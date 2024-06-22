@@ -1,22 +1,58 @@
 .detailBox {
-    margin: 30px;
+    margin: 50px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .infoBox {
     text-align: center;
     font-family: "DM Sans", sans-serif;
-    margin-left: 15px;
 }
 
 .name {
-    font-size: 35px;
+    font-size: 50px;
     margin-bottom: 15px;
+}
+
+.description {
+    width: 240px;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: inline-block;
+    text-align: center;
+}
+
+.price {
+    font-size: 24px;
+    margin: 30px;
 }
 
 .imageBox img {
     width: 250px;
     height: 300px;
     object-fit: cover;
+    
+}
+
+@media (min-width: 700px) {
+    .detailBox {
+        flex-direction: row;
+        justify-content: center;
+        align-items: last baseline;
+        
+    }
+
+    .infoBox {
+        padding-left: 40px;
+    }
+
+    .description {
+        width: 400px;
+        text-align: justify;
+    }
+
+    .price {
+        margin-bottom: 50px;
+    }
 }
