@@ -1,8 +1,20 @@
-import React from "react"
+import React, { useContext } from "react"
 import styles from "./Styles/ItemDetail.module.css"
 import ItemCount from "../ItemCount/ItemCount"
+import Context from "../../context/CartContext"
 
-const ItemDetail = ({ name, description, image, price, stock }) => {
+function ItemDetail({ id, name, description, image, price, stock }) {
+    const { addItem } = useContext(Context)
+
+    const onAdd = (quantity) => {
+        const item = {
+            id,
+            name,
+            price
+        }
+        addItem(item, quantity)
+    }
+
     return (
         <>
             <div className={styles.detailBox}>
@@ -14,7 +26,7 @@ const ItemDetail = ({ name, description, image, price, stock }) => {
                     <p className={styles.description}>{description}</p>
                     <p className={styles.price}>${price}</p>
                     <div className={styles.buttonBox}>
-                        <ItemCount stock={stock} initialValue={1}/>
+                        <ItemCount stock={stock} initialValue={1} onAdd={onAdd} />
                     </div>
                 </div>
             </div>
