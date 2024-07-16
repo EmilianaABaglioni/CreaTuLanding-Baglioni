@@ -7,11 +7,11 @@ export const CartContextProvider = ({ children }) => {
 
   const addItem = (productToAdd, quantity) => {
     const itemNew = {
-      quantity,
       ...productToAdd,
+      quantity
     };
 
-    setCart(itemNew);
+    setCart([itemNew]);
   };
 
   return (

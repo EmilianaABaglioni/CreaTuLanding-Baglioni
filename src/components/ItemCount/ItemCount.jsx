@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Styles/ItemCount.module.css";
 
-const ItemCount = ({ stock, initialValue }) => {
+const ItemCount = ({ stock, initialValue, onAdd }) => {
   const [count, setCount] = useState(initialValue);
   const increase = () => {
     count < stock && setCount(count + 1);

@@ -15,6 +15,7 @@ function ItemDetail({ id, name, description, image, price, stock }) {
         addItem(item, quantity)
     }
 
+
     return (
         <>
             <div className={styles.detailBox}>
