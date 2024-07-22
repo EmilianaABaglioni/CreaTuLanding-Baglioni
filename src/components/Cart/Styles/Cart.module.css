@@ -39,22 +39,50 @@
     font-size: 12px;
 }
 
+.boxRemoveItem button {
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
 .boxCartDetail p,
 .boxCartDetail div {
     width: 20%;
 }
 
 .boxTotal { 
-    border: 1px black solid;
+    margin-top: 30px;
+    border-top: 1px black solid;
     font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.boxEndButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boxEndButtons button {
+    border-radius: 0;
+    border-style: none;
+    border: solid 1px black;
     font-size: 16px;
-    padding-right: 10px;
-    text-align: end;
+    padding: 6px 18px;
+    font-family: "League Spartan", sans-serif;
+    margin: 10px;   
 }
 
 @media (min-width: 700px) {
     .boxColumnDescription,
     .boxCartDetail {
         font-size: 14px;
+    }
+
+    .boxEndButtons button {
+        width: 30%;
     }
 }

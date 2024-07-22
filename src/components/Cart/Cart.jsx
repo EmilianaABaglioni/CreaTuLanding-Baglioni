@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Styles/Cart.module.css";
 import Context from "../../context/CartContext";
-import { MdDelete } from "react-icons/md";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const Cart = () => {
   const { cart, removeItem, clearCart } = useContext(Context);
@@ -25,7 +26,7 @@ const Cart = () => {
               <p>${product.price * product.quantity}</p>
               <div className={styles.boxRemoveItem}>
                 <button onClick={() => removeItem(product.id)}>
-                  <MdDelete />
+                  <RiDeleteBin5Line />
                 </button>
               </div>
             </div>
@@ -33,6 +34,11 @@ const Cart = () => {
         </div>
         <div className={styles.boxTotal}>
           <p>TOTAL ${}</p>
+        </div>
+        <div className={styles.boxEndButtons}>
+          <button>Finalizar compra</button>
+          <button  onClick={() => clearCart()}>Vaciar carrito</button>
+          <button><Link to='/'>Seguir comprando</Link></button>
         </div>
       </div>
     </>
