@@ -5,7 +5,7 @@ import Context from "../../context/CartContext";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 const Cart = () => {
-  const { cart, removeItem, clearCart } = useContext(Context);
+  const { cart, removeItem, clearCart, total } = useContext(Context);
 
   return (
     <>
@@ -33,7 +33,7 @@ const Cart = () => {
           ))}
         </div>
         <div className={styles.boxTotal}>
-          <p>TOTAL ${}</p>
+          <p>TOTAL ${total()}</p>
         </div>
         <div className={styles.boxEndButtons}>
           <button>Finalizar compra</button>

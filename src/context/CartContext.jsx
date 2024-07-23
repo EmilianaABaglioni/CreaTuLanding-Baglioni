@@ -15,15 +15,15 @@ export const CartContextProvider = ({ children }) => {
       quantity
     };
 
-    if(inCart(itemNew.id)){
+    if (inCart(itemNew.id)) {
       const updatedCart = cart.map((product) => {
-        if(product.id === itemNew.id){
-          return { ...product, quantity: product.quantity + itemNew.quantity}
+        if (product.id === itemNew.id) {
+          return { ...product, quantity: product.quantity + itemNew.quantity }
         }
         return product
       })
       setCart(updatedCart)
-    }else{
+    } else {
       setCart([...cart, itemNew]);
     }
   };
@@ -33,12 +33,16 @@ export const CartContextProvider = ({ children }) => {
     setCart([...updatedCart])
   };
 
+  const total = () => {
+    return cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+  }
+
   const clearCart = () => {
     setCart([])
   };
 
   return (
-    <Context.Provider value={{ cart, setCart, addItem, removeItem, clearCart }}>
+    <Context.Provider value={{ cart, setCart, addItem, removeItem, clearCart, total }}>
       {children}
     </Context.Provider>
   );
