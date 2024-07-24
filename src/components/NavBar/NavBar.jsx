@@ -23,7 +23,8 @@ const NavBar = () => {
           </div>
 
           <div className={styles.boxSing}>
-            <p className={styles.sing}>Sing up Sing in</p>
+            <p className={styles.sing}>Sing in</p>
+            <p className={styles.sing}>Sing up</p>
           </div>
 
           <div className={styles.boxCartWidget}>
