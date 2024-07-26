@@ -7,12 +7,9 @@
 }
 
 .quantity {
-    color: rgba(0, 0, 0, 0.37);
+    color: rgb(0, 0, 0);
     align-self: flex-end;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 3px 6px 4px 6px;
-    border: 2px rgba(0, 0, 0, 0.103) solid;
-    border-radius: 100%;
+    font-size: 8px;
+    font-weight: 900;
 }
