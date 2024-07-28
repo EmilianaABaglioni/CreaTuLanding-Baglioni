@@ -18,8 +18,8 @@ const Cart = () => {
           <p>ELIMINAR</p>
         </div>
         <div className={styles.boxCartList}>
-          {cart.map((product) => (
-            <div className={styles.boxCartDetail}>
+          {cart.map((product, id) => (
+            <div className={styles.boxCartDetail} key={id}>
               <p>{product.name}</p>
               <p>{product.quantity}</p>
               <p>${product.price}</p>
@@ -36,7 +36,7 @@ const Cart = () => {
           <p>TOTAL ${total()}</p>
         </div>
         <div className={styles.boxEndButtons}>
-          <button>Finalizar compra</button>
+          <button><Link to='/checkout'>Finalizar compra</Link></button>
           <button  onClick={() => clearCart()}>Vaciar carrito</button>
           <button><Link to='/'>Seguir comprando</Link></button>
         </div>

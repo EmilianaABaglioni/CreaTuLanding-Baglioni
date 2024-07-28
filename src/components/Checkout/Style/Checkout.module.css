@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formInfo {
+    width: min-content;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-start;
+    font-family: "League Spartan", sans-serif;
+}
+
+.inputInfo {
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+.buy {
+    align-self: center;
+    width: 250px;
+    border-radius: 0;
+    border-style: none;
+    border: solid 1px black;
+    font-size: 16px;
+    padding: 6px 18px;
+    font-family: "League Spartan", sans-serif;
+    margin: 10px;
+}
