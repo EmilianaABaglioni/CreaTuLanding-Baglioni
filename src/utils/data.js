@@ -1,6 +1,5 @@
-const products = [
+export const products = [
   {
-    id: 1,
     name: "Vestido.1",
     category: "vestidos",
     description: "Vestido de fiesta deslumbrante y chic, diseñado para captar la atención en cualquier ocasión especial. Confeccionado con telas de alta calidad y detalles que añaden brillo y sofisticación. Su corte favorecedor y su acabado impecable lo convierten en la elección perfecta para destacar en eventos nocturnos y celebraciones memorables.",
@@ -10,7 +9,6 @@ const products = [
     stock: 10,
   },
   {
-    id: 2,
     name: "Vestido.2",
     category: "vestidos",
     description: "Vestido de fiesta deslumbrante y chic, diseñado para captar la atención en cualquier ocasión especial. Confeccionado con telas de alta calidad y detalles que añaden brillo y sofisticación. Su corte favorecedor y su acabado impecable lo convierten en la elección perfecta para destacar en eventos nocturnos y celebraciones memorables.",
@@ -20,7 +18,6 @@ const products = [
     stock: 10,
   },
   {
-    id: 3,
     name: "Vestido.3",
     category: "vestidos",
     description: "Vestido de fiesta deslumbrante y chic, diseñado para captar la atención en cualquier ocasión especial. Confeccionado con telas de alta calidad y detalles que añaden brillo y sofisticación. Su corte favorecedor y su acabado impecable lo convierten en la elección perfecta para destacar en eventos nocturnos y celebraciones memorables.",
@@ -30,7 +27,6 @@ const products = [
     stock: 10,
   },
   {
-    id: 4,
     name: "Remera",
     category: "remeras",
     description: "Remera de encaje delicada y sofisticada, ideal para añadir un toque de elegancia a cualquier conjunto. Confeccionada con detalles meticulosos que realzan el estilo y ofrecen un ajuste cómodo. Perfecta para eventos especiales o para elevar el look diario con un toque de glamour.",
@@ -40,7 +36,6 @@ const products = [
     stock: 10,
   },
   {
-    id: 5,
     name: "Pantalon",
     category: "pantalones",
     description: "Pantalón moderno y versátil, ideal para combinar con cualquier atuendo casual o de negocios. Fabricado con tejidos resistentes y detalles cuidadosamente diseñados para un ajuste perfecto y confort durante todo el día.",
@@ -50,7 +45,6 @@ const products = [
     stock: '10',
   },
   {
-    id: 6,
     name: "Camisa",
     category: "camisas",
     description: "Camisa elegante y sofisticada, confeccionada con algodón de primera calidad para un tacto suave y una apariencia impecable. Perfecta para ocasiones formales o informales, garantiza estilo y comodidad en cualquier situación",
@@ -68,32 +62,3 @@ export const listCategory = categories.filter((category, id) => {
   return categories.indexOf(category) === id;
 });
 
-export const getProducts = () => {
-  return new Promise((res, rec) => {
-    setTimeout(() => {
-      res(products);
-    }, 350);
-  });
-};
-
-export const getProductsByCategory = (categoryId) => {
-  return new Promise((res) => {
-    const filteredProducts = products.filter(
-      (product) => product.category === categoryId
-    );
-    setTimeout(() => {
-      res(filteredProducts);
-    }, 350);
-  });
-};
-
-export const getProductById = (productId) => {
-  return new Promise((res) => {
-    const productF = products.find(
-      (product) => product.id === parseInt(productId)
-    );
-    setTimeout(() => {
-      res(productF);
-    }, 350);
-  });
-}
