@@ -9,14 +9,12 @@
 
 .boxLinks {
     display: flex;
-    justify-content: center;
-    align-content: center;
 }
 
 .boxLinks div {
+    align-content: center;
     width: 100%;
     margin: 10px;
-
 }
 
 .sing {
